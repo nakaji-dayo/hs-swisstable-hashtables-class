@@ -1,0 +1,39 @@
+name:                hs-swisstable-hashtables-class
+version:             0.1.0.0
+github:              "nakaji-dayo/hs-swisstable-hashtables-class"
+license:             BSD3
+author:              "Daishi Nakajima"
+maintainer:          "nakaji.dayo@gmail.com"
+copyright:           "2021 Daishi Nakajima"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/nakaji-dayo/hs-swisstable-hashtables-class#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- swisstable
+- hashtables
+
+library:
+  source-dirs: src
+
+tests:
+  hs-swisstable-hashtables-class-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hs-swisstable-hashtables-class
